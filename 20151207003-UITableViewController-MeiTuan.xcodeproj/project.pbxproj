@@ -15,6 +15,11 @@
 		D5B260781C156ACC00174F02 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5B260761C156ACC00174F02 /* LaunchScreen.storyboard */; };
 		D5B260831C156ACD00174F02 /* _0151207003_UITableViewController_MeiTuanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D5B260821C156ACD00174F02 /* _0151207003_UITableViewController_MeiTuanTests.m */; };
 		D5B2608E1C156ACD00174F02 /* _0151207003_UITableViewController_MeiTuanUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D5B2608D1C156ACD00174F02 /* _0151207003_UITableViewController_MeiTuanUITests.m */; };
+		D5B2609C1C156B2B00174F02 /* tgs.plist in Resources */ = {isa = PBXBuildFile; fileRef = D5B2609B1C156B2B00174F02 /* tgs.plist */; };
+		D5B2609F1C15739200174F02 /* TuanGouModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D5B2609E1C15739200174F02 /* TuanGouModel.m */; };
+		D5B260A31C1575F400174F02 /* NSArray+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = D5B260A21C1575F400174F02 /* NSArray+Log.m */; };
+		D5B260AD1C157DD100174F02 /* TuanGouTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D5B260AC1C157DD000174F02 /* TuanGouTableViewCell.m */; };
+		D5B260AF1C157E1D00174F02 /* TuanGouTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5B260AE1C157E1D00174F02 /* TuanGouTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +56,14 @@
 		D5B260891C156ACD00174F02 /* 20151207003-UITableViewController-MeiTuanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "20151207003-UITableViewController-MeiTuanUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5B2608D1C156ACD00174F02 /* _0151207003_UITableViewController_MeiTuanUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _0151207003_UITableViewController_MeiTuanUITests.m; sourceTree = "<group>"; };
 		D5B2608F1C156ACD00174F02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D5B2609B1C156B2B00174F02 /* tgs.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = tgs.plist; sourceTree = "<group>"; };
+		D5B2609D1C15739200174F02 /* TuanGouModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TuanGouModel.h; sourceTree = "<group>"; };
+		D5B2609E1C15739200174F02 /* TuanGouModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TuanGouModel.m; sourceTree = "<group>"; };
+		D5B260A11C1575F400174F02 /* NSArray+Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Log.h"; sourceTree = "<group>"; };
+		D5B260A21C1575F400174F02 /* NSArray+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Log.m"; sourceTree = "<group>"; };
+		D5B260AB1C157DD000174F02 /* TuanGouTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TuanGouTableViewCell.h; sourceTree = "<group>"; };
+		D5B260AC1C157DD000174F02 /* TuanGouTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TuanGouTableViewCell.m; sourceTree = "<group>"; };
+		D5B260AE1C157E1D00174F02 /* TuanGouTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TuanGouTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,14 +114,7 @@
 		D5B260671C156ACC00174F02 /* 20151207003-UITableViewController-MeiTuan */ = {
 			isa = PBXGroup;
 			children = (
-				D5B2606B1C156ACC00174F02 /* AppDelegate.h */,
-				D5B2606C1C156ACC00174F02 /* AppDelegate.m */,
-				D5B2606E1C156ACC00174F02 /* ViewController.h */,
-				D5B2606F1C156ACC00174F02 /* ViewController.m */,
-				D5B260711C156ACC00174F02 /* Main.storyboard */,
-				D5B260741C156ACC00174F02 /* Assets.xcassets */,
-				D5B260761C156ACC00174F02 /* LaunchScreen.storyboard */,
-				D5B260791C156ACC00174F02 /* Info.plist */,
+				D5B260A71C157D0E00174F02 /* Classes */,
 				D5B260681C156ACC00174F02 /* Supporting Files */,
 			);
 			path = "20151207003-UITableViewController-MeiTuan";
@@ -117,6 +123,10 @@
 		D5B260681C156ACC00174F02 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D5B260741C156ACC00174F02 /* Assets.xcassets */,
+				D5B260791C156ACC00174F02 /* Info.plist */,
+				D5B260761C156ACC00174F02 /* LaunchScreen.storyboard */,
+				D5B260711C156ACC00174F02 /* Main.storyboard */,
 				D5B260691C156ACC00174F02 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -138,6 +148,73 @@
 				D5B2608F1C156ACD00174F02 /* Info.plist */,
 			);
 			path = "20151207003-UITableViewController-MeiTuanUITests";
+			sourceTree = "<group>";
+		};
+		D5B260A41C157CC500174F02 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D5B2606E1C156ACC00174F02 /* ViewController.h */,
+				D5B2606F1C156ACC00174F02 /* ViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		D5B260A51C157CF200174F02 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D5B2609D1C15739200174F02 /* TuanGouModel.h */,
+				D5B2609E1C15739200174F02 /* TuanGouModel.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		D5B260A61C157D0200174F02 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				D5B260A11C1575F400174F02 /* NSArray+Log.h */,
+				D5B260A21C1575F400174F02 /* NSArray+Log.m */,
+			);
+			name = Others;
+			sourceTree = "<group>";
+		};
+		D5B260A71C157D0E00174F02 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				D5B260AA1C157D8000174F02 /* Views */,
+				D5B260A91C157D5F00174F02 /* Resources */,
+				D5B260A81C157D4400174F02 /* Delegate */,
+				D5B260A51C157CF200174F02 /* Models */,
+				D5B260A41C157CC500174F02 /* Controllers */,
+				D5B260A61C157D0200174F02 /* Others */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		D5B260A81C157D4400174F02 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				D5B2606B1C156ACC00174F02 /* AppDelegate.h */,
+				D5B2606C1C156ACC00174F02 /* AppDelegate.m */,
+			);
+			name = Delegate;
+			sourceTree = "<group>";
+		};
+		D5B260A91C157D5F00174F02 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D5B2609B1C156B2B00174F02 /* tgs.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		D5B260AA1C157D8000174F02 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D5B260AB1C157DD000174F02 /* TuanGouTableViewCell.h */,
+				D5B260AC1C157DD000174F02 /* TuanGouTableViewCell.m */,
+				D5B260AE1C157E1D00174F02 /* TuanGouTableViewCell.xib */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,7 +320,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5B260AF1C157E1D00174F02 /* TuanGouTableViewCell.xib in Resources */,
 				D5B260781C156ACC00174F02 /* LaunchScreen.storyboard in Resources */,
+				D5B2609C1C156B2B00174F02 /* tgs.plist in Resources */,
 				D5B260751C156ACC00174F02 /* Assets.xcassets in Resources */,
 				D5B260731C156ACC00174F02 /* Main.storyboard in Resources */,
 			);
@@ -270,7 +349,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5B260A31C1575F400174F02 /* NSArray+Log.m in Sources */,
+				D5B260AD1C157DD100174F02 /* TuanGouTableViewCell.m in Sources */,
 				D5B260701C156ACC00174F02 /* ViewController.m in Sources */,
+				D5B2609F1C15739200174F02 /* TuanGouModel.m in Sources */,
 				D5B2606D1C156ACC00174F02 /* AppDelegate.m in Sources */,
 				D5B2606A1C156ACC00174F02 /* main.m in Sources */,
 			);
