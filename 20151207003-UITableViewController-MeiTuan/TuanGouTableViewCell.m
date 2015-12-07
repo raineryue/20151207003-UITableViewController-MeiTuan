@@ -9,6 +9,7 @@
 #import "TuanGouTableViewCell.h"
 
 @interface TuanGouTableViewCell ()
+
 @property (weak, nonatomic) IBOutlet UIImageView *tuanGouImageView;
 @property (weak, nonatomic) IBOutlet UILabel *tuanGouNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *tuanGouPriceLabel;
@@ -18,24 +19,36 @@
 
 @implementation TuanGouTableViewCell
 
-- (instancetype)initTuanGouTableViewCellWithTableView:(UITableView *)tableView tuanGouModel:(TuanGouModel *)tuanGou {
+/**
+ *  通过表格初始化一个团购表格行（对象方法）
+ */
+- (instancetype)initTuanGouTableViewCellWithTableView:(UITableView *)tableView {
     TuanGouTableViewCell *tuanGouTableViewCell = [tableView dequeueReusableCellWithIdentifier:@"tuanGouTableViewIdentifier"];
     
     if (nil == tuanGouTableViewCell) {
         tuanGouTableViewCell = [[[NSBundle mainBundle] loadNibNamed:@"TuanGouTableViewCell" owner:nil options:nil] lastObject];
     }
     
-    self.tuanGouImageView.image = [UIImage imageNamed:tuanGou.icon];
-    self.tuanGouNameLabel.text = tuanGou.title;
-    self.tuanGouPriceLabel.text = [NSString stringWithFormat:@"¥%@", tuanGou.price ];
-    self.tuanGoubuyCountLabel.text = [NSString stringWithFormat:@"%@人已购买", tuanGou.buyCount];
-    
     return tuanGouTableViewCell;
 }
 
-+ (instancetype)tuanGouTableViewCellWithTableView:(UITableView *)tableView tuanGouModel:(TuanGouModel *)tuanGou {
-        return [[TuanGouTableViewCell alloc] initTuanGouTableViewCellWithTableView:tableView tuanGouModel:tuanGou];
+/**
+ *  通过表格初始化一个团购表格行（类方法）
+ */
++ (instancetype)tuanGouTableViewCellWithTableView:(UITableView *)tableView {
+    return [[TuanGouTableViewCell alloc] initTuanGouTableViewCellWithTableView:tableView];
 }
 
+/**
+ *  复写团购属性的setter方法，并给表格行属性填充数据
+ */
+- (void)setTuanGou:(TuanGouModel *)tuanGou {
+    _tuanGou = tuanGou;
+    
+    self.tuanGouImageView.image = [UIImage imageNamed:tuanGou.icon];
+    self.tuanGouNameLabel.text = tuanGou.title;
+    self.tuanGouPriceLabel.text = [NSString stringWithFormat:@"¥%@", tuanGou.price ];
+    self.tuanGoubuyCountLabel.text = [NSString stringWithFormat:@"%@人购买", tuanGou.buyCount];
+}
 
 @end
