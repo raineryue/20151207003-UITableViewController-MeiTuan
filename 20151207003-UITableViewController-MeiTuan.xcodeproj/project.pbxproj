@@ -20,6 +20,8 @@
 		D5B260A31C1575F400174F02 /* NSArray+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = D5B260A21C1575F400174F02 /* NSArray+Log.m */; };
 		D5B260AD1C157DD100174F02 /* TuanGouTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D5B260AC1C157DD000174F02 /* TuanGouTableViewCell.m */; };
 		D5B260AF1C157E1D00174F02 /* TuanGouTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5B260AE1C157E1D00174F02 /* TuanGouTableViewCell.xib */; };
+		D5C45A5D1C1D6BB300B5C5A1 /* TuanGouTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = D5C45A5C1C1D6BB300B5C5A1 /* TuanGouTableHeaderView.m */; };
+		D5C45A601C1D6CEA00B5C5A1 /* AutoScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = D5C45A5F1C1D6CEA00B5C5A1 /* AutoScrollView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,10 @@
 		D5B260AB1C157DD000174F02 /* TuanGouTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TuanGouTableViewCell.h; sourceTree = "<group>"; };
 		D5B260AC1C157DD000174F02 /* TuanGouTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TuanGouTableViewCell.m; sourceTree = "<group>"; };
 		D5B260AE1C157E1D00174F02 /* TuanGouTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TuanGouTableViewCell.xib; sourceTree = "<group>"; };
+		D5C45A5B1C1D6BB300B5C5A1 /* TuanGouTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TuanGouTableHeaderView.h; sourceTree = "<group>"; };
+		D5C45A5C1C1D6BB300B5C5A1 /* TuanGouTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TuanGouTableHeaderView.m; sourceTree = "<group>"; };
+		D5C45A5E1C1D6CEA00B5C5A1 /* AutoScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoScrollView.h; sourceTree = "<group>"; };
+		D5C45A5F1C1D6CEA00B5C5A1 /* AutoScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoScrollView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +219,10 @@
 				D5B260AB1C157DD000174F02 /* TuanGouTableViewCell.h */,
 				D5B260AC1C157DD000174F02 /* TuanGouTableViewCell.m */,
 				D5B260AE1C157E1D00174F02 /* TuanGouTableViewCell.xib */,
+				D5C45A5B1C1D6BB300B5C5A1 /* TuanGouTableHeaderView.h */,
+				D5C45A5C1C1D6BB300B5C5A1 /* TuanGouTableHeaderView.m */,
+				D5C45A5E1C1D6CEA00B5C5A1 /* AutoScrollView.h */,
+				D5C45A5F1C1D6CEA00B5C5A1 /* AutoScrollView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -349,11 +359,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5C45A5D1C1D6BB300B5C5A1 /* TuanGouTableHeaderView.m in Sources */,
 				D5B260A31C1575F400174F02 /* NSArray+Log.m in Sources */,
 				D5B260AD1C157DD100174F02 /* TuanGouTableViewCell.m in Sources */,
 				D5B260701C156ACC00174F02 /* ViewController.m in Sources */,
 				D5B2609F1C15739200174F02 /* TuanGouModel.m in Sources */,
 				D5B2606D1C156ACC00174F02 /* AppDelegate.m in Sources */,
+				D5C45A601C1D6CEA00B5C5A1 /* AutoScrollView.m in Sources */,
 				D5B2606A1C156ACC00174F02 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -578,6 +590,7 @@
 				D5B260941C156ACD00174F02 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D5B260951C156ACD00174F02 /* Build configuration list for PBXNativeTarget "20151207003-UITableViewController-MeiTuanTests" */ = {
 			isa = XCConfigurationList;
@@ -586,6 +599,7 @@
 				D5B260971C156ACD00174F02 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D5B260981C156ACD00174F02 /* Build configuration list for PBXNativeTarget "20151207003-UITableViewController-MeiTuanUITests" */ = {
 			isa = XCConfigurationList;
@@ -594,6 +608,7 @@
 				D5B2609A1C156ACD00174F02 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

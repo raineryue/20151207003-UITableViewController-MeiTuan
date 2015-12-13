@@ -9,14 +9,12 @@
 #import "ViewController.h"
 #import "TuanGouModel.h"
 #import "TuanGouTableViewCell.h"
-
-#define kViewMargin 10
-#define kAdImageCount 5
+#import "TuanGouTableHeaderView.h"
 
 @interface ViewController ()
 
 /** 头部视图 */
-@property (nonatomic, strong) UIView *tableHeaderView;
+@property (nonatomic, strong) TuanGouTableHeaderView *tableHeaderView;
 
 /** 尾部视图 */
 @property (nonatomic, strong) UIView *tableFooterView;
@@ -77,30 +75,7 @@
 - (UIView *)tableHeaderView {
     if (nil == _tableHeaderView) {
         // 1.创建头部视图
-        _tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 141)];
-        
-        // 2.创建滚动视图
-        UIScrollView *imageScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(kViewMargin, 0, _tableHeaderView.bounds.size.width - kViewMargin * 2, 90)];
-        imageScrollView.contentSize = CGSizeMake(imageScrollView.bounds.size.width * kAdImageCount, imageScrollView.bounds.size.height);
-        imageScrollView.pagingEnabled = YES;
-        imageScrollView.backgroundColor = [UIColor orangeColor];
-        
-        [_tableHeaderView addSubview:imageScrollView];
-        
-        // 3.创建分割线视图
-        UIView *lineViewTop = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(imageScrollView.frame) + kViewMargin, _tableHeaderView.bounds.size.width, 0.5)];
-        lineViewTop.backgroundColor = [UIColor lightGrayColor];
-        [_tableHeaderView addSubview:lineViewTop];
-        
-        // 4.创建标题标签
-        UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(kViewMargin, CGRectGetMaxY(lineViewTop.frame), _tableHeaderView.bounds.size.width, 40)];
-        titleLabel.text = @"猜你喜欢";
-        [_tableHeaderView addSubview:titleLabel];
-        
-        // 3.创建分割线视图
-        UIView *lineViewButtom = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(titleLabel.frame), _tableHeaderView.bounds.size.width, 0.5)];
-        lineViewButtom.backgroundColor = [UIColor lightGrayColor];
-        [_tableHeaderView addSubview:lineViewButtom];
+        _tableHeaderView = [[TuanGouTableHeaderView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 161)];
     }
     
     return _tableHeaderView;
