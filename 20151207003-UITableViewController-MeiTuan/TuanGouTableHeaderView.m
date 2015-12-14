@@ -31,8 +31,6 @@
         
         [self addSubview:self.imageScrollView];
         
-        // 2.设置默认分页
-        self.pageControl.currentPage = 0;
         
         // 3.创建分割线视图
         UIView *lineViewTop = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.imageScrollView.frame) + kViewMargin, self.bounds.size.width, 0.5)];
@@ -68,31 +66,6 @@
     }
     
     return _scrollViewDataArray;
-}
-
-- (UIPageControl *)pageControl {
-    if (nil == _pageControl) {
-        UIPageControl *pageControl = [[UIPageControl alloc] init];
-        
-        pageControl.numberOfPages = self.scrollViewDataArray.count;
-        
-        CGSize pageControlSize = [pageControl sizeForNumberOfPages:pageControl.numberOfPages];
-        
-        CGFloat pageControlX = self.imageScrollView.center.x;
-        CGFloat pageControlY = CGRectGetMaxY(self.imageScrollView.frame) - 10;
-        
-        pageControl.center = CGPointMake(pageControlX, pageControlY);
-        pageControl.bounds = (CGRect){CGPointZero, pageControlSize};
-        
-        pageControl.pageIndicatorTintColor = [UIColor grayColor];
-        pageControl.currentPageIndicatorTintColor = [UIColor orangeColor];
-        
-        _pageControl = pageControl;
-        
-        [self addSubview:_pageControl];
-    }
-    
-    return _pageControl;
 }
 
 @end

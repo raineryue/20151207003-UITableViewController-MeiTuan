@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AutoScrollView : UIScrollView
+@interface AutoScrollView : UIView
 
 @property (nonatomic, strong) NSArray *contentArray;
 
