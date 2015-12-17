@@ -150,7 +150,6 @@
     [UIView animateWithDuration:0.3f animations:^{
         self.scrollView.contentOffset = CGPointMake(scrollViewW * currentPage, 0);
     }];
-    
 }
 
 #pragma mark - 滚动视图代理方法

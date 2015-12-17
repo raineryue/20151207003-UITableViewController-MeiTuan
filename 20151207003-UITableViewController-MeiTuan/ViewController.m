@@ -10,17 +10,18 @@
 #import "TuanGouModel.h"
 #import "TuanGouTableViewCell.h"
 #import "TuanGouTableHeaderView.h"
+#import "TuanGouTableFooterView.h"
 
-@interface ViewController ()
+@interface ViewController () <TuanGouTableFooterViewDelegate>
 
 /** 头部视图 */
 @property (nonatomic, strong) TuanGouTableHeaderView *tableHeaderView;
 
 /** 尾部视图 */
-@property (nonatomic, strong) UIView *tableFooterView;
+@property (nonatomic, strong) TuanGouTableFooterView *tableFooterView;
 
 /** 团购对象数组 */
-@property (nonatomic, strong) NSArray *tuanGouArray;
+@property (nonatomic, strong) NSMutableArray *tuanGouArray;
 
 @end
 
@@ -86,8 +87,9 @@
  */
 - (UIView *)tableFooterView {
     if (nil == _tableFooterView) {
-        _tableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 40)];
-        _tableFooterView.backgroundColor = [UIColor yellowColor];
+        _tableFooterView = [[TuanGouTableFooterView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 40)];
+        _tableFooterView.backgroundColor = [UIColor colorWithRed:246 / 255.0 green:246 / 255.0 blue:246 / 255.0 alpha:1.0];
+        _tableFooterView.delegate = self;
     }
     
     return _tableFooterView;
@@ -97,13 +99,38 @@
 /**
  *  团购属性懒加载，加载团购数组
  */
-- (NSArray *)tuanGouArray {
+- (NSMutableArray *)tuanGouArray {
     if (nil == _tuanGouArray) {
-        _tuanGouArray = [TuanGouModel tuanGouArray];
+        _tuanGouArray = [NSMutableArray arrayWithArray:[TuanGouModel tuanGouArray]];
     }
     
     return _tuanGouArray;
 }
+
+- (void)tuanGouTableFooterView:(TuanGouTableFooterView *)tableFooterView {
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        
+        TuanGouModel *tuanGouModel = [[TuanGouModel alloc] init];
+        
+        tuanGouModel.buyCount = @"20";
+        tuanGouModel.icon = @"37e4761e6ecf56a2d78685df7157f097.png";
+        tuanGouModel.price = @"188";
+        tuanGouModel.title = @"诸葛烤鱼";
+        
+        [self.tuanGouArray addObject:tuanGouModel];
+    
+//        [self.tableView reloadData];
+        
+        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:self.tuanGouArray.count - 1 inSection:0];
+        
+        [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationMiddle];
+        
+        [self.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionBottom animated:YES];
+        
+        [tableFooterView endLoadMoreData];
+    });
+}
+
 
 #pragma mark - 内存处理方法
 /**
